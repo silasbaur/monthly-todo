@@ -1,15 +1,34 @@
 @import "/styles/mixins.scss";
 
-.todo_input {
-  display: block;
-  padding: 10px;
-  width: 80%;
-}
-
 .todo_input_container {
   display: flex;
 }
 
+.todo_input {
+  background-color: transparent;
+  border: 1px solid #149fff;
+  border-radius: 4px 0 0 4px;
+  color: white;
+  display: block;
+  padding: 10px;
+  width: 80%;
+
+  &:focus {
+    outline: transparent;
+  }
+
+}
+
+.todo_input:-internal-autofill-selected {
+  background-color: transparent !important;
+}
 .btn {
   width: 20%;
+  border-radius: 0 4px 4px 0;
+  background: $blue-gradient;
+  border: none;
+
+  &:focus {
+    outline: transparent;
+  }
 }

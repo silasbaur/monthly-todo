@@ -5,6 +5,9 @@
 
 }
 
+$bg-colors: $blue-gradient, $orange-gradient, $purple-gradient, $pink-gradient;
+
+
 @mixin random-bgr(){
   background: rgb(random(255), random(255), random(255));
 }
@@ -12,12 +15,13 @@
 .isComplete {
   display: flex;
   padding: 10px 12px;
+  border-radius: 4px;
   margin-top: 20px;
   justify-content: space-between;
 
-  @for $i from 0 to 100 {
-    &:nth-child(#{$i}) {
-      @include random-bgr();
+  @for $i from 1 to 5 {
+    &:nth-child(#{length($bg-colors)}n+#{$i}) {
+      background: nth($bg-colors, $i);
     }
   }
 }
