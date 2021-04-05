@@ -1,0 +1,15 @@
+@import "/styles/mixins.scss";
+
+.todo_input {
+  display: block;
+  padding: 10px;
+  width: 80%;
+}
+
+.todo_input_container {
+  display: flex;
+}
+
+.btn {
+  width: 20%;
+}
